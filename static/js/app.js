@@ -28,7 +28,7 @@ function buildTable(data){
 };
 
 function handleClick(){
-    // Grab the datetime value from the filter
+    // Grab the datetime value from the filter with HRML tag 'datetime'
     let date = d3.select("#datetime").property("value");
     // declare a dafault filter variable
     let filteredData = tableData;
