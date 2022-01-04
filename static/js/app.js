@@ -29,17 +29,24 @@ var filters = {};
 // 3. Use this function to update the filters. 
 function updateFilters() {
 
-    // 4a. Save the element that was changed as a variable.
+    let filterIDList = ['datetime','city','state','country','shape']
 
-    // 4b. Save the value that was changed as a variable.
+    filterIDList.forEach(listItem){};
+      // 4a. Save the element that was changed as a variable.
+      filterIDList[listItem]
+      let elementChanged = {};
+      // 4b. Save the value that was changed as a variable.
+      elementChanged.value = d3.select("#datetime").property("value");
 
-    // 4c. Save the id of the filter that was changed as a variable.
-
-  
-    // 5. If a filter value was entered then add that filterId and value
-    // to the filters list. Otherwise, clear that filter from the filters object.
- 
-  
+      // 4c. Save the id of the filter that was changed as a variable.
+      elementChanged.filterID = 'datetime';
+    
+      // 5. If a filter value was entered then add that filterId and value
+      // to the filters list. Otherwise, clear that filter from the filters object.
+      if (elementChanged.value) {
+        filters.append.elementChanged
+      };
+    };
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
   
