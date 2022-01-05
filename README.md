@@ -1,12 +1,12 @@
 # UFOs
 
 ## Overview of Project:
-In this module, we used JavaScript, HTML, and CSS to create a custom webpage with dynamic table that showcases different UFO sightinhs around the world.
+In this module, we use JavaScript, HTML, and CSS to create a custom webpage with dynamic table that showcases different UFO sightings around the world.
 
 Dana would like to provide a more in-depth analysis of UFO sightings by allowing users to filter for multiple criteria at the same time. In addition to the date, you’ll add table filters for the city, state, country, and shape.
 
 ## Results:
-- How to use the search for this webpage:
+- How to use the search function for this webpage:
     1. Once you open the webpage, all the records are listed in the dynamic table by default.
     ![Image 1](static/images/image1.jpg)
     2. You may add filters for "date", "city", "state", "country", and "shape" in the corresponding filtering boxes from the left.
@@ -14,16 +14,13 @@ Dana would like to provide a more in-depth analysis of UFO sightings by allowing
     ![Image 2](static/images/image2.jpg)
     4. You may further narrow down the results by adding multiple criteria. For example, type in 'triangle' in the shape field, and press [tab], the table will show records that matched all the criteria.
     ![Image 3](static/images/image3.jpg)
-    5. You are reset the search results by clicking the 'UFO Sightings' button in the top left hand corner.
-
-
-by walking her through the process of using the search criteria. Use images of your webpage during the filtering process to support your explanation.
-
-- Deliverables:
-    1. updated app.js
-    2. upated index.html
-    3. data.js
-    4. updated README.md (this file)
+    5. You can reset the search results by clicking the 'UFO Sightings' button in the top left hand corner.
 
 ## Summary:
-- In a summary statement, describe one drawback of this new design and two recommendations for further development.
+- Although the webpage and dynamic table are working as intended, there is a main drawback of the design: the formatting of the input 'date' field is confusing.  Is it mm/dd/yyyy or dd/mm/yyyy?
+- Recommendations for improvement:
+    1. Replacing the text box with a calendar in the 'date' field.
+    2. Setup a dropdown button for the 'Shape' field, and allow user to select the pre-defined shape from the list.
+    3. Add a [Clear All] button to reset all values input in the filter search.
+
+
