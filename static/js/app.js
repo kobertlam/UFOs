@@ -32,10 +32,10 @@ function updateFilters() {
     let changedElement = d3.select(this);
     // 4b. Save the value that was changed as a variable.
     let elementValue = changedElement.property("value");
-    console.log("elementValue: " + elementValue);
+    // console.log("elementValue: " + elementValue);
     // 4c. Save the id of the filter that was changed as a variable.
     let filterID = changedElement.attr("id");
-    console.log("filterID: " + filterID);
+    // console.log("filterID: " + filterID);
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
     if (elementValue) {
@@ -57,51 +57,12 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-
-    // Get the value for the datetime attribute
-    let date = filters.datetime;
-    console.log("inside filterTable (date): " + date);
-    if (date) {
-      // Apply 'filter' to the table data to only keep the
-      // rows where the 'datetime' value matched the filter value
-      filteredData = filteredData.filter(row => row.datetime === date);
-    };
-  
-    // Get the value for the city attribute
-    let city = filters.city;
-    console.log("inside filterTable (city): " + city);
-    if (city) {
-      // Apply 'filter' to the table data to only keep the
-      // rows where the 'city' value matched the filter value
-      filteredData = filteredData.filter(row => row.city === city);
-    };
-
-    // Get the value for the state attribute
-    let state = filters.state;
-    console.log("inside filterTable (state): " + state);
-    if (state) {
-      // Apply 'filter' to the table data to only keep the
-      // rows where the 'state' value matched the filter value
-      filteredData = filteredData.filter(row => row.state === state);
-    };
-
-    // Get the value for the country attribute
-    let country = filters.country;
-    console.log("inside filterTable (country): " + country);
-    if (country) {
-      // Apply 'filter' to the table data to only keep the
-      // rows where the 'country' value matched the filter value
-      filteredData = filteredData.filter(row => row.country === country);
-    };
-
-    // Get the value for the shpae attribute
-    let shape = filters.shape;
-    console.log("inside filterTable (shape): " + shape);
-    if (shape) {
-      // Apply 'filter' to the table data to only keep the
-      // rows where the 'shape' value matched the filter value
-      filteredData = filteredData.filter(row => row.shape === shape);
-    };
+    
+    // console.log("inside filterTable()";
+    Object.entries(filters).forEach(([key, value]) => {
+      // console.log("key:value-->" + key + ":" + value);
+      filteredData = filteredData.filter(row => row[key] === value);
+    });
 
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
